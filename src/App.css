@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Roboto+Condensed:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #38495b;
+  padding: 40px 0;
+}
+
+.fm-1 {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.fm-2 {
+  font-family: "Playfair Display", sans-serif;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+.column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.checkbox-input {
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.card {
+  border: 1px solid #f0f0f0;
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+  width: 100%;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.card .title {
+  text-transform: uppercase;
+  font-size: 24px;
+  color: #ffffff;
+  margin-top: 20px;
+}
+
+.card .price {
+  font-size: 24px;
+}
+
+.card p {
+  color: #909090;
+}
+
+.card .permonth {
+  color: #ffffff;
+}
+
+.card hr {
+  width: 100%;
+  border-color: #909090;
+  margin: 30px 0;
+}
+
+.checkbox-input:checked + .card,
+.card:hover {
+  background-color: #ffffff;
+  border-color: #ffffff;
+}
+
+.checkbox-input:checked + .card .title,
+.checkbox-input:checked + .card .permonth,
+.card:hover .title,
+.card:hover .permonth {
+  color: #0f0f0f;
+}
+
+.checkbox-input:checked + .card hr,
+.card:hover hr {
+  border-color: #f0f0f0;
+}
+
+@media screen and (max-width: 768px) {
+  .column {
+    flex-direction: column;
+  }
+}
